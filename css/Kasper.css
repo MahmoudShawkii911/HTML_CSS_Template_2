@@ -185,7 +185,7 @@
   .landing {
     min-height: 100vh;
     background-color: #1f2021;
-    background-image: url("../images/landing.jpg");
+    background-image: url("../imgs/landing.jpg");
     background-size: cover;
     position: relative;
   }
@@ -309,3 +309,136 @@
     color: var(--paragraph-color);
 }
 /* End Services */
+/* Start Design */
+.design {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  height: 600px;
+  position: relative;
+  background-image: url(../imgs/design-features.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.design::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+.design .image,
+.design .text {
+  position: relative;
+  z-index: ;
+  flex: 1;
+}
+.design .image {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .design .image {
+    display: none;
+  }
+}
+.design .image img {
+  position: relative;
+  bottom: -150px;
+}
+.design .text {
+  color: white;
+  padding: 50px;
+  background-color: var(--transparent-color);
+}
+.design .text h2 {
+  font-weight: normal;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.design .text ul li {
+  padding: 15px 0;
+}
+.design .text ul li::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f108';
+  font-weight: 900;
+  margin-right: 20px;
+  position: relative;
+  top: 1px;
+}
+/* End Design */
+/* Start portfolio */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .shuffle li {
+  padding: 10px;
+}
+.portfolio .shuffle li.active {
+  background-color: var(--transparent-color);
+  color: white;
+}
+.portfolio .img-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.portfolio .img-container .box {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .img-container .box:hover .caption {
+  bottom: 0;
+}
+.portfolio .img-container .box:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+@media (min-width: 768px) {
+  .portfolio .img-container .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  .portfolio .img-container .box {
+    flex-basis: 25%;
+  }
+}
+.portfolio .img-container .box img {
+  max-width: 100%;
+  transition: .3s;
+}
+.portfolio .img-container .box .caption {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  left: 0;
+  background-color: white;
+  transition: .3s;
+  bottom: -100%;
+}
+.portfolio .img-container .box .caption h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.portfolio .img-container .box .caption p {
+  color: var(--main-color);
+}
+.portfolio .more {
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* End portfolio */
